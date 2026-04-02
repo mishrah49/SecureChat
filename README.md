@@ -6,6 +6,8 @@ SecureChat is a proof-of-concept Instant Messaging (IM) architecture designed fo
 
 The system operates without a traditional backend application server. iOS clients communicate directly with AWS infrastructure using temporary, tightly-scoped IAM credentials.
 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_q63bg1q63bg1q63b" src="https://github.com/user-attachments/assets/f0b0fdf2-841a-42ed-9abc-817e4be72233" />
+
 ### Components
 1. **iOS Client (Swift/SwiftUI):** Manages the user interface, biometric authentication (LocalAuthentication), and cryptographic operations (CryptoKit).
 2. **Apple Secure Enclave:** A dedicated, isolated subsystem on the iPhone. It generates and stores the user's private keys. The keys *never* leave this chip.
@@ -63,3 +65,4 @@ All messages uploaded to S3 conform to the following JSON structure. **No plain 
   "payload": "base64_encoded_ciphertext_message_data",
   "ttl": 604800 
 }
+```
